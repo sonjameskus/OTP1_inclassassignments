@@ -33,29 +33,6 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                bat '''
-                    echo ===== WHO AM I =====
-                    whoami
-
-                    echo ===== PATH =====
-                    echo %PATH%
-
-                    echo ===== FIND DOCKER =====
-                    where.exe docker
-
-                    echo ===== DOCKER VERSION =====
-                    docker --version
-
-                    echo ===== DOCKER INFO =====
-                    docker info
-
-                    echo ===== BUILD =====
-                    docker build -t "sinyalohis/otp1_inclass:v1" .
-                '''
-            }
-        }
 
         stage('Build Docker Image') {
             steps {
