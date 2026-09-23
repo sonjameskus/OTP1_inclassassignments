@@ -16,7 +16,4 @@ public class TemperatureConverter {
         return kelvin - 273.15;
     }
 
-    public static void main(String[] args) {
-        TemperatureConverter converter = new TemperatureConverter();
-    }
 }

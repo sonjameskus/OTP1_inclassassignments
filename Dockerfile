@@ -3,4 +3,4 @@ WORKDIR /app
 COPY pom.xml .
 COPY . /app
 RUN mvn package
-CMD ["java", "-jar", "target/OTP1_inclassassignments-1.0-SNAPSHOT.jar"]
+CMD ["mvn", "test"]
