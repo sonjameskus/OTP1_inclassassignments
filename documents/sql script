@@ -1,0 +1,25 @@
+CREATE USER 'temperature'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON temperature_db.* TO 'temperature'@'localhost';
+
+CREATE DATABASE temperature_db;
+
+CREATE TABLE temperature_units (
+   unit_id INT AUTO_INCREMENT NOT NULL,
+   name VARCHAR (80) NOT NULL,
+   symbol VARCHAR (10) NOT NULL,
+   PRIMARY KEY(unit_id)
+);
+
+CREATE TABLE temp_records (
+   record_id INT AUTO_INCREMENT NOT NULL,
+   user_id INT NOT NULL,
+   input_value DOUBLE NOT NULL,
+   result_value DOUBLE NOT NULL,
+   from_unit_id INT NOT NULL,
+   to_unit_id INT NOT NULL,
+   created_at DATETIME NOT NULL,
+   PRIMARY KEY(record_id)
+);
+
+ALTER TABLE temp_records ADD CONSTRAINT from_unit_id FOREIGN KEY (from_unit_id) REFERENCES temperature_units(unit_id);
+ALTER TABLE temp_records ADD CONSTRAINT to_unit_id FOREIGN KEY (to_unit_id) REFERENCES temperature_units(unit_id);

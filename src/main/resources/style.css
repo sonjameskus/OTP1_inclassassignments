@@ -1,0 +1,77 @@
+.app-background {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            #B6CF7C,
+            #F29AAB
+
+    );
+}
+
+.converter-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 22px;
+    -fx-max-width: 390px;
+}
+
+.title {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #B6CF7C;
+}
+
+.subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #F29AAB;
+    -fx-padding: 0 0 12px 0;
+}
+
+.field-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #F29AAB;
+}
+
+.text-field,
+.combo-box {
+    -fx-background-color: #F29AAB;
+    -fx-background-radius: 9px;
+    -fx-border-color: #F29AAB;
+    -fx-border-radius: 9px;
+    -fx-border-width: 1px;
+    -fx-padding: 9px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused,
+.combo-box:focused {
+    -fx-border-color: #B6CF7C;
+}
+
+.convert-button {
+    -fx-background-color: #B6CF7C;
+    -fx-text-fill: #F29AAB;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10px;
+    -fx-padding: 13px;
+    -fx-cursor: hand;
+}
+
+.convert-button:hover {
+    -fx-background-color: #B6CF7C;
+}
+
+.result {
+    -fx-background-color: #F29AAB;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #B6CF7C;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-padding: 16px;
+    -fx-max-width: infinity;
+}
+
+.status {
+    -fx-font-size: 11px;
+    -fx-text-fill: #B6CF7C;
+}
