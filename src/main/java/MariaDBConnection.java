@@ -9,8 +9,8 @@ public class MariaDBConnection {
             try {
                 conn = DriverManager.getConnection(
                         "jdbc:mariadb://localhost:3306/temperature_db",
-                        "root",
-                        "Veelaonparas"
+                        "temperature",
+                        "password"
                 );
             } catch (SQLException e) {
                 System.out.println("Connection failed.");
